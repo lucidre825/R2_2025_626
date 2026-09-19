@@ -43,7 +43,7 @@ void encode_reply_msg(uint8_t *msg_recved, uint8_t *encode_result_msg)
 
 int rmt_check_rmts_status(char status_code[], RMTS_STATUS targ_status)
 {
-    switch (targ_status)
+    switch ((uint32_t)targ_status)
     {
         case RMTS_CONTROL:
         {

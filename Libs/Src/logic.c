@@ -468,6 +468,18 @@ void Logic_StateRunner()
             dir_moving_ok_flag = Logic_DircMoving(shoottarg_tf, chassis_tf);
             break;
         }
+				case ROBOSTATE_MANUAL_MOVING:
+				{
+					break;
+				}
+				case ROBOSTATE_AUTOMATIC_MOVING:
+				{
+					break;
+				}
+					case ROBOSTATE_SHOOTING:
+				{
+					break;
+				}
     }
 }
 
@@ -520,6 +532,11 @@ void Logic_StateTransmitor()
                     
                     break;
                 }
+									/****   模式：自动比赛   ****/
+								case ROBOMODE_MATCH_AUTO:
+								{
+									break;
+								}
             }
             break;
         }
@@ -555,6 +572,11 @@ void Logic_StateTransmitor()
                     
                     break;
                 }
+									/****   模式：自动比赛   ****/
+								case ROBOMODE_MATCH_AUTO:
+								{
+									break;
+								}
             }
             break;
         }
@@ -590,6 +612,11 @@ void Logic_StateTransmitor()
                     
                     break;
                 }
+								/****   模式：自动比赛    ****/
+								case ROBOMODE_MATCH_AUTO:
+								{
+									break;
+								}
             }
             break;
         }
@@ -625,6 +652,11 @@ void Logic_StateTransmitor()
                     
                     break;
                 }
+								/****   模式：自动比赛   ****/
+								case ROBOMODE_MATCH_AUTO:
+								{
+									break;
+								}
             }
             break;
         }
@@ -638,6 +670,18 @@ void Logic_StateTransmitor()
             }
             break;
         }
+						case ROBOSTATE_MANUAL_MOVING:
+				{
+					break;
+				}
+				case ROBOSTATE_AUTOMATIC_MOVING:
+				{
+					break;
+				}
+					case ROBOSTATE_SHOOTING:
+				{
+					break;
+				}
     }
 }
 
