@@ -87,6 +87,8 @@ void motor_vesc_handle(MotorVescRecvData vesc_recvs)
             // targ_motor_vesc->motor_rpm_real = (int32_t)(vesc_recvs.recv_data[0] << 24 | vesc_recvs.recv_data[1] << 16
             //     | vesc_recvs.recv_data[2] << 8 | vesc_recvs.recv_data[3]);
         }
+				default:
+					break;
     }
 }
 
@@ -123,6 +125,7 @@ int motor_vesc_set_rpm(int motor_id, float set_rpm)
         motor_vesc_3.motor_rpm_set = (int)set_rpm;
         return 1;
     }
+		return 0;
 }
 
 
