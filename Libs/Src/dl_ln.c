@@ -246,7 +246,7 @@ void DL_LN_parse_module_info(uint8_t *buffer, uint16_t buffer_len, UART_HandleTy
         char baud_rate_message[50];
         if (baud_rate != 0)
         {
-            sprintf(baud_rate_message, "Baud Rate: %lu bps\r\n", baud_rate);
+            sprintf(baud_rate_message, "Baud Rate: %u bps\r\n", baud_rate);
         }
         else
         {
@@ -716,5 +716,5 @@ int DL_LN_decode(uint8_t recv_msg[], DL_LN_Msg* recv_msg_info)
  */
 void DL_LN_reply_node_info(UART_HandleTypeDef *DL_LN_UART, char name[], uint16_t addr)
 {
-    DL_LN_send_packet(DL_LN_UART, DL_LN_REPLY_PORT, DL_LN_QUERY_PORT, addr, name, 8);
+    DL_LN_send_packet(DL_LN_UART, DL_LN_REPLY_PORT, DL_LN_QUERY_PORT, addr, (unsigned char*)name, 8);
 }
